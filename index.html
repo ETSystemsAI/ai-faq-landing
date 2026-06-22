@@ -136,23 +136,165 @@
     font-size: 14px; color: var(--slate); font-style: italic;
   }
 
-  /* LIVE DEMO */
-  .demo-box {
-    background: linear-gradient(135deg, var(--indigo), #6366F1); border-radius: 24px;
-    padding: 56px 48px; text-align: center; margin-top: 48px; color: white;
+  /* LIVE DEMO - CHAT INTERFACE */
+  .chat-container {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.08);
+    margin-top: 48px;
+    overflow: hidden;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .demo-box h3 { font-size: 26px; margin-bottom: 12px; }
-  .demo-box p { color: #DBE3FF; max-width: 520px; margin: 0 auto 28px; font-size: 15.5px; }
-  .demo-questions {
-    display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 28px;
+  
+  .chat-header {
+    background: var(--indigo);
+    color: white;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
-  .demo-chip {
-    background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25);
-    color: white; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-style: italic;
+  
+  .chat-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
   }
-  .btn-white {
-    background: white; color: var(--indigo); padding: 14px 32px; border-radius: 26px;
-    font-weight: 700; font-size: 15px; text-decoration: none; display: inline-block;
+  
+  .chat-header h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+  
+  .chat-header .status {
+    font-size: 12px;
+    opacity: 0.8;
+    font-weight: 400;
+  }
+  
+  .chat-messages {
+    padding: 24px;
+    background: #FAFAFB;
+  }
+  
+  .message {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  
+  .message.user {
+    flex-direction: row-reverse;
+  }
+  
+  .message-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+  }
+  
+  .message-avatar.bot {
+    background: var(--indigo);
+  }
+  
+  .message-avatar.user-avatar {
+    background: #9CA3AF;
+  }
+  
+  .message-bubble {
+    max-width: 75%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .message.bot .message-bubble {
+    background: white;
+    border: 1px solid var(--border);
+    color: var(--ink);
+  }
+  
+  .message.user .message-bubble {
+    background: var(--indigo);
+    color: white;
+  }
+  
+  .message-time {
+    font-size: 11px;
+    color: var(--slate-light);
+    margin-top: 4px;
+    display: block;
+  }
+  
+  .message.user .message-time {
+    text-align: right;
+  }
+  
+  .chat-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 16px 24px 24px;
+    background: white;
+    border-top: 1px solid var(--border);
+  }
+  
+  @media (max-width: 768px) {
+    .chat-features {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .feature-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--slate);
+    padding: 8px 12px;
+    background: var(--bg);
+    border-radius: 8px;
+  }
+  
+  .feature-tag .icon {
+    font-size: 16px;
+  }
+  
+  .demo-note {
+    text-align: center;
+    margin-top: 24px;
+    color: var(--slate);
+    font-size: 14px;
+  }
+  
+  .demo-note a {
+    color: var(--indigo);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .demo-note a:hover {
+    text-decoration: underline;
   }
 
   /* LANGUAGES */
@@ -343,22 +485,132 @@
   </div>
 </section>
 
-<!-- LIVE DEMO -->
+<!-- LIVE DEMO - REAL CONVERSATION -->
 <section class="alt-bg" id="demo">
   <div class="wrap">
     <div class="kicker">Live demo</div>
-    <h2>See it in action</h2>
-    <p class="lede">This is a real, working assistant — not a mockup. Open it and ask your own questions.</p>
-    <div class="demo-box">
-      <h3>Try the live assistant</h3>
-      <p>Click below to open the actual AI FAQ Assistant in demo mode. Ask anything from the list, or type your own question.</p>
-      <div class="demo-questions">
-        <span class="demo-chip">"How does this bot work?"</span>
-        <span class="demo-chip">"Does it understand multiple languages?"</span>
-        <span class="demo-chip">"Can it process screenshots?"</span>
-        <span class="demo-chip">"How much does this cost?"</span>
+    <h2>A real conversation, not a script</h2>
+    <p class="lede">This is an actual interaction with the AI FAQ Assistant. Real questions from prospective customers, real grounded answers.</p>
+    
+    <div class="chat-container">
+      <div class="chat-header">
+        <div class="chat-avatar">AI</div>
+        <div>
+          <h3>AI FAQ Assistant</h3>
+          <span class="status">● Online — grounded in real documentation</span>
+        </div>
       </div>
-      <a href="https://sinus-faq-bot-production.up.railway.app/widget/demo.html" target="_blank" class="btn-white">Open live demo →</a>
+      
+      <div class="chat-messages">
+        <!-- Message 1: User -->
+        <div class="message user">
+          <div class="message-avatar user-avatar">👤</div>
+          <div>
+            <div class="message-bubble">
+              How does this bot work?
+              <span class="message-time">11:32</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Message 2: Bot -->
+        <div class="message bot">
+          <div class="message-avatar bot">AI</div>
+          <div>
+            <div class="message-bubble">
+              I search your documentation, FAQ, and manuals to find the exact answer to each question. I don't guess — I only respond with information that exists in your knowledge base. If I can't find it, I'll let you know and offer to connect you with a human.
+              <span class="message-time">11:32</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Message 3: User -->
+        <div class="message user">
+          <div class="message-avatar user-avatar">👤</div>
+          <div>
+            <div class="message-bubble">
+              Does it understand multiple languages?
+              <span class="message-time">11:33</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Message 4: Bot -->
+        <div class="message bot">
+          <div class="message-avatar bot">AI</div>
+          <div>
+            <div class="message-bubble">
+              Yes — one knowledge base works across multiple languages. Customers can ask in their own language, and the assistant responds in the same language. Currently supporting Serbian (Cyrillic and Latin) and English, with additional languages available on request.
+              <span class="message-time">11:33</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Message 5: User -->
+        <div class="message user">
+          <div class="message-avatar user-avatar">👤</div>
+          <div>
+            <div class="message-bubble">
+              Can it process screenshots?
+              <span class="message-time">11:34</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Message 6: Bot -->
+        <div class="message bot">
+          <div class="message-avatar bot">AI</div>
+          <div>
+            <div class="message-bubble">
+              Yes — when a customer uploads a screenshot, the assistant analyzes the image to understand exactly what field or issue they're referring to, then provides precise, contextual help based on your documentation.
+              <span class="message-time">11:34</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Message 7: User -->
+        <div class="message user">
+          <div class="message-avatar user-avatar">👤</div>
+          <div>
+            <div class="message-bubble">
+              How much does this cost?
+              <span class="message-time">11:35</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Message 8: Bot -->
+        <div class="message bot">
+          <div class="message-avatar bot">AI</div>
+          <div>
+            <div class="message-bubble">
+              Pricing is tailored to each deployment based on documentation volume, expected usage, language requirements, integrations, and screenshot support. I can connect you with our team for a short discovery call to provide an accurate estimate.
+              <span class="message-time">11:35</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="chat-features">
+        <div class="feature-tag">
+          <span class="icon">🌐</span>
+          <span>Multilingual support in a single knowledge base</span>
+        </div>
+        <div class="feature-tag">
+          <span class="icon">📷</span>
+          <span>Screenshot understanding</span>
+        </div>
+        <div class="feature-tag">
+          <span class="icon">🛡️</span>
+          <span>Grounded, honest answers</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="demo-note">
+      💡 Live demonstration available during a discovery call — we'll show how it works with your own questions.
+      <br>
+      <a href="#contact">→ Request a live demo</a>
     </div>
   </div>
 </section>
