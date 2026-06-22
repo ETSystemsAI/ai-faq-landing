@@ -210,4 +210,277 @@
     display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: 900;
   }
   .engage-card.dark p { color: white; font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
-  .engage-card.dark .divider { border-top: 1px solid rgba(255,255,255,0.25); margin: 16px 0;
+  .engage-card.dark .divider { border-top: 1px solid rgba(255,255,255,0.25); margin: 16px 0; }
+  .engage-card.dark .discovery { font-style: italic; color: #E0E7FF; font-size: 14px; }
+
+  /* PROOF STATS */
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+  @media (max-width: 768px) { .stats { grid-template-columns: 1fr; } }
+  .stat-card {
+    background: white; border: 1px solid var(--border); border-radius: 16px;
+    padding: 32px; text-align: center; box-shadow: 0 1px 3px rgba(17,24,39,0.04);
+  }
+  .stat-card .num { font-size: 38px; font-weight: 800; color: var(--indigo); margin: 8px 0; }
+  .stat-card .label { font-size: 13.5px; color: var(--slate); }
+
+  /* CONTACT / FOOTER CTA */
+  .contact-section {
+    background: var(--indigo); color: white; border-radius: 28px; padding: 64px 48px;
+    text-align: center; margin: 0 24px 80px;
+  }
+  .contact-section h2 { color: white; font-size: 34px; }
+  .contact-section p { color: #DBE3FF; max-width: 480px; margin: 0 auto 32px; font-size: 16px; }
+  .contact-info { margin-top: 32px; font-size: 14.5px; color: #C7D2FE; }
+  .contact-info a { color: white; font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); }
+
+  footer { text-align: center; padding: 32px 0; color: var(--slate-light); font-size: 13px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">
+      <div class="brand-mark">ET</div>
+      ETSystemsAI
+    </div>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="blob-a"></div>
+  <div class="blob-b"></div>
+  <div class="wrap">
+    <div class="kicker">AI FAQ Assistant</div>
+    <h1>Answers your customers' repetitive questions instantly</h1>
+    <p class="lede">Turn documentation into instant customer support — in their language, day or night.</p>
+    <div class="hero-ctas">
+      <a href="#demo" class="btn-primary">See it in action</a>
+      <a href="#contact" class="btn-secondary">Talk to us</a>
+    </div>
+    <div class="pill"><span class="dot"></span> Built and proven on a live production deployment</div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section>
+  <div class="wrap">
+    <div class="kicker">The problem</div>
+    <h2>Your support team answers the same questions, every day</h2>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-icon">📄</div>
+        <h3>Repetitive tickets pile up</h3>
+        <p>"How do I fill in this field?" "What changed in the last update?" — the same handful of questions, over and over.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⏱️</div>
+        <h3>Answers take hours, not seconds</h3>
+        <p>Customers wait for a reply during business hours, while the answer often already exists in your docs.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👥</div>
+        <h3>Knowledge lives in someone's head</h3>
+        <p>Your best support answers are scattered across emails, chats, and one experienced employee's memory.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Regulation changes hit all at once</h3>
+        <p>When the market or the rules governing your business shift, you get a sudden flood of "how do I do this now?" — all at once.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="kicker">How it works</div>
+    <h2>Grounded in your real knowledge — not guesses</h2>
+    <p class="lede">Your customer asks a question. The assistant searches your FAQ, manuals, and documentation, finds the relevant answer, and replies — in seconds, in the customer's own language.</p>
+    <div class="flow">
+      <div class="flow-step"><div class="icon-circle">💬</div><p>Customer asks</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon-circle">🔍</div><p>Assistant searches your knowledge base</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step active"><div class="icon-circle">🤖</div><p>Answer generated from real content</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon-circle">✅</div><p>Customer gets an instant answer</p></div>
+    </div>
+    <div class="note-box">If the answer isn't in your knowledge base, the assistant says so honestly — and routes the customer to your team.</div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Capabilities</div>
+    <h2>What it actually does</h2>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>Answers from facts, not guesses</h3>
+        <p>Every answer is grounded in your own documentation. No hallucinated policies, no made-up steps.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h3>Understands multiple languages at once</h3>
+        <p>One knowledge base, many languages — customers ask in their own words, no separate setup per language.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📷</div>
+        <h3>Understands screenshots</h3>
+        <p>A customer can attach a screenshot of their screen — the assistant sees what field they mean and answers precisely.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Shows you what customers actually ask</h3>
+        <p>A built-in dashboard tracks questions the assistant couldn't confidently answer — a ready-made list of what to add to your FAQ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE DEMO -->
+<section class="alt-bg" id="demo">
+  <div class="wrap">
+    <div class="kicker">Live demo</div>
+    <h2>See it in action</h2>
+    <p class="lede">This is a real, working assistant — not a mockup. Open it and ask your own questions.</p>
+    <div class="demo-box">
+      <h3>Try the live assistant</h3>
+      <p>Click below to open the actual AI FAQ Assistant in demo mode. Ask anything from the list, or type your own question.</p>
+      <div class="demo-questions">
+        <span class="demo-chip">"How does this bot work?"</span>
+        <span class="demo-chip">"Does it understand multiple languages?"</span>
+        <span class="demo-chip">"Can it process screenshots?"</span>
+        <span class="demo-chip">"How much does this cost?"</span>
+      </div>
+      <a href="https://sinus-faq-bot-production.up.railway.app/widget/demo.html" target="_blank" class="btn-white">Open live demo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- MULTILINGUAL -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Customization</div>
+    <h2>This demo runs in Serbian and English.<br>Your deployment runs in your languages.</h2>
+    <div class="info-card">
+      <div class="card-icon">🌐</div>
+      <p>The assistant already handles Serbian (Cyrillic and Latin) and English in the same knowledge base — no separate setup per language. Tell us which languages your customers use, and we configure the assistant accordingly.</p>
+    </div>
+    <h3 style="margin-top:40px; font-size:18px;">Which languages does your customer base need?</h3>
+    <div class="lang-chips">
+      <span class="lang-chip">English</span>
+      <span class="lang-chip">Serbian</span>
+      <span class="lang-chip">Czech</span>
+      <span class="lang-chip">German</span>
+      <span class="lang-chip">Italian</span>
+      <span class="lang-chip cta">+ Your language</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DIFFERENT -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="kicker">Why it's different</div>
+    <h2>Reliable, fully managed, easy to embed</h2>
+    <div style="margin-top:40px;">
+      <div class="feature-row">
+        <div class="card-icon">🛡️</div>
+        <div><h3>Honest by design</h3><p>If the answer isn't in your knowledge base, it says so — and routes to your team. It never invents a policy or a number.</p></div>
+      </div>
+      <div class="feature-row">
+        <div class="card-icon">🖥️</div>
+        <div><h3>Fully managed for you</h3><p>We run the infrastructure, monitor uptime, and keep the assistant updated — your team never touches a server.</p></div>
+      </div>
+      <div class="feature-row">
+        <div class="card-icon">🔌</div>
+        <div><h3>Drops into your existing site</h3><p>One line of code embeds the chat widget wherever you already have a website — no rebuild required.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Process</div>
+    <h2>From your content to a live assistant</h2>
+    <div class="steps">
+      <div class="step-card"><div class="step-num">1</div><h4>Send your content</h4><p>FAQ, manuals, documentation — any format you already have.</p></div>
+      <div class="step-card"><div class="step-num">2</div><h4>We build &amp; test</h4><p>Knowledge base, search, and the assistant — built and refined.</p></div>
+      <div class="step-card"><div class="step-num">3</div><h4>You review</h4><p>Test it yourself on a private link before anything goes live.</p></div>
+      <div class="step-card"><div class="step-num">4</div><h4>It goes live</h4><p>Embedded on your site, answering customers immediately.</p></div>
+    </div>
+    <div class="note-box" style="text-align:center;">Typical timeline: 4–5 weeks for a text-based assistant. Screenshot support adds 1–2 weeks.</div>
+  </div>
+</section>
+
+<!-- ENGAGEMENT -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="kicker">Engagement</div>
+    <h2>A managed service, not a one-time handoff</h2>
+    <p class="lede">The assistant keeps running, keeps improving, and stays aligned with your documentation.</p>
+    <div class="engage-grid">
+      <div class="engage-card light">
+        <div class="engage-label">WHAT'S INCLUDED</div>
+        <ul class="check-list">
+          <li><span class="check-dot">✓</span> Knowledge base setup</li>
+          <li><span class="check-dot">✓</span> Assistant configuration</li>
+          <li><span class="check-dot">✓</span> Ongoing maintenance</li>
+          <li><span class="check-dot">✓</span> Monitoring and updates</li>
+          <li><span class="check-dot">✓</span> Analytics and continuous improvement</li>
+          <li><span class="check-dot">✓</span> Direct engineering support</li>
+        </ul>
+      </div>
+      <div class="engage-card dark">
+        <div class="engage-label">ENGAGEMENT MODEL</div>
+        <p>Every deployment is scoped individually based on documentation volume, expected usage, language requirements, integrations, and screenshot support.</p>
+        <div class="divider"></div>
+        <div class="discovery">Pricing available after a short discovery call.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Proof</div>
+    <h2>Already running in production</h2>
+    <p class="lede">This isn't a concept — it's deployed for a real company: a 25-year-old accounting software provider, serving clients across Serbia.</p>
+    <div class="stats">
+      <div class="stat-card"><div>🕐</div><div class="num">24/7</div><div class="label">always answering</div></div>
+      <div class="stat-card"><div>🌐</div><div class="num">3</div><div class="label">languages supported</div></div>
+      <div class="stat-card"><div>⚡</div><div class="num">&lt;5s</div><div class="label">average response time</div></div>
+    </div>
+    <p style="text-align:center; color:var(--slate-light); font-style:italic; font-size:13.5px; margin-top:24px;">Reference details available on request.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-section">
+    <div class="kicker" style="color:#C7D2FE;">Why work with us</div>
+    <h2>Built by someone who builds, not just sells</h2>
+    <p>15 minutes is enough to show you exactly how it works with your own questions.</p>
+    <a href="mailto:e.kate.taratuta@gmail.com" class="btn-white">Get in touch</a>
+    <div class="contact-info">
+      <strong style="color:white; display:block; font-size:16px; margin-bottom:4px;">Ekaterina Taratuta</strong>
+      Ph.D., Founding ML &amp; Systems Engineer · ETSystemsAI<br>
+      <a href="mailto:e.kate.taratuta@gmail.com">e.kate.taratuta@gmail.com</a> &nbsp;·&nbsp;
+      <a href="https://linkedin.com/in/ekaterina-taratuta" target="_blank">linkedin.com/in/ekaterina-taratuta</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 ETSystemsAI</footer>
+
+</body>
+</html>
