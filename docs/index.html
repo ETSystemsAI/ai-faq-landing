@@ -51,7 +51,7 @@
   @media (max-width: 768px) { h2 { font-size: 28px; } }
   .lede { font-size: 18px; color: var(--slate); max-width: 640px; line-height: 1.5; }
 
-  /* ── BUNDLE BANNER ─────────────────────────────────── */
+  /* BUNDLE BANNER */
   .bundle-banner {
     background: linear-gradient(135deg, #4F46E5 0%, #3730A3 100%);
     color: white;
@@ -162,10 +162,10 @@
   .card h3 { font-size: 18px; margin-bottom: 8px; }
   .card p { color: var(--slate); font-size: 14.5px; }
 
-  /* ALT BG SECTION */
+  /* ALT BG */
   .alt-bg { background: var(--bg); }
 
-  /* HOW IT WORKS FLOW */
+  /* FLOW */
   .flow { display: flex; align-items: stretch; gap: 12px; margin-top: 48px; flex-wrap: wrap; }
   .flow-step {
     flex: 1; min-width: 140px; background: var(--indigo-soft); border-radius: 16px;
@@ -184,173 +184,46 @@
     font-size: 14px; color: var(--slate); font-style: italic;
   }
 
-  /* CHAT INTERFACE */
+  /* CHAT */
   .chat-container {
-    background: white;
-    border-radius: 20px;
-    border: 1px solid var(--border);
-    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.08);
-    margin-top: 48px;
-    overflow: hidden;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    background: white; border-radius: 20px; border: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.08); margin-top: 48px; overflow: hidden;
+    max-width: 800px; margin-left: auto; margin-right: auto;
   }
-  
   .chat-header {
-    background: var(--indigo);
-    color: white;
-    padding: 16px 24px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    background: var(--indigo); color: white; padding: 16px 24px; display: flex; align-items: center; gap: 12px;
   }
-  
   .chat-avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 14px;
+    width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.2);
+    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;
   }
-  
-  .chat-header h3 {
-    font-size: 16px;
-    font-weight: 700;
-    color: white;
-    margin: 0;
-  }
-  
-  .chat-header .status {
-    font-size: 12px;
-    opacity: 0.8;
-    font-weight: 400;
-  }
-  
-  .chat-messages {
-    padding: 24px;
-    background: #FAFAFB;
-  }
-  
-  .message {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 20px;
-    align-items: flex-start;
-  }
-  
-  .message.user {
-    flex-direction: row-reverse;
-  }
-  
+  .chat-header h3 { font-size: 16px; font-weight: 700; color: white; margin: 0; }
+  .chat-header .status { font-size: 12px; opacity: 0.8; font-weight: 400; }
+  .chat-messages { padding: 24px; background: #FAFAFB; }
+  .message { display: flex; gap: 12px; margin-bottom: 20px; align-items: flex-start; }
+  .message.user { flex-direction: row-reverse; }
   .message-avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 12px;
-    color: white;
+    width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; color: white;
   }
-  
-  .message-avatar.bot {
-    background: var(--indigo);
-  }
-  
-  .message-avatar.user-avatar {
-    background: #9CA3AF;
-  }
-  
-  .message-bubble {
-    max-width: 75%;
-    padding: 12px 16px;
-    border-radius: 12px;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  
-  .message.bot .message-bubble {
-    background: white;
-    border: 1px solid var(--border);
-    color: var(--ink);
-  }
-  
-  .message.user .message-bubble {
-    background: var(--indigo);
-    color: white;
-  }
-  
-  .message-time {
-    font-size: 11px;
-    color: var(--slate-light);
-    margin-top: 4px;
-    display: block;
-  }
-  
-  .message.user .message-time {
-    text-align: right;
-  }
-  
-  .chat-features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    padding: 16px 24px 24px;
-    background: white;
-    border-top: 1px solid var(--border);
-  }
-  
-  @media (max-width: 768px) {
-    .chat-features {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  .feature-tag {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: var(--slate);
-    padding: 8px 12px;
-    background: var(--bg);
-    border-radius: 8px;
-  }
-  
-  .feature-tag .icon {
-    font-size: 16px;
-  }
-  
-  .demo-note {
-    text-align: center;
-    margin-top: 24px;
-    color: var(--slate);
-    font-size: 14px;
-  }
-  
-  .demo-note a {
-    color: var(--indigo);
-    font-weight: 600;
-    text-decoration: none;
-  }
-  
-  .demo-note a:hover {
-    text-decoration: underline;
-  }
+  .message-avatar.bot { background: var(--indigo); }
+  .message-avatar.user-avatar { background: #9CA3AF; }
+  .message-bubble { max-width: 75%; padding: 12px 16px; border-radius: 12px; font-size: 14px; line-height: 1.5; }
+  .message.bot .message-bubble { background: white; border: 1px solid var(--border); color: var(--ink); }
+  .message.user .message-bubble { background: var(--indigo); color: white; }
+  .message-time { font-size: 11px; color: var(--slate-light); margin-top: 4px; display: block; }
+  .message.user .message-time { text-align: right; }
+  .chat-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 16px 24px 24px; background: white; border-top: 1px solid var(--border); }
+  @media (max-width: 768px) { .chat-features { grid-template-columns: 1fr; } }
+  .feature-tag { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--slate); padding: 8px 12px; background: var(--bg); border-radius: 8px; }
+  .feature-tag .icon { font-size: 16px; }
+  .demo-note { text-align: center; margin-top: 24px; color: var(--slate); font-size: 14px; }
+  .demo-note a { color: var(--indigo); font-weight: 600; text-decoration: none; }
+  .demo-note a:hover { text-decoration: underline; }
 
   /* LANGUAGES */
   .lang-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-  .lang-chip {
-    border: 1.5px solid var(--border); padding: 10px 20px; border-radius: 24px;
-    font-size: 14px; font-weight: 600; background: white;
-  }
+  .lang-chip { border: 1.5px solid var(--border); padding: 10px 20px; border-radius: 24px; font-size: 14px; font-weight: 600; background: white; }
   .lang-chip.cta { background: var(--indigo); color: white; border: none; }
   .info-card {
     background: white; border: 1px solid var(--border); border-radius: 16px;
@@ -360,7 +233,7 @@
   .info-card .card-icon { flex-shrink: 0; margin-bottom: 0; }
   .info-card p { color: var(--ink); font-size: 15px; }
 
-  /* WHY DIFFERENT ROWS */
+  /* FEATURE ROWS */
   .feature-row {
     display: flex; gap: 20px; align-items: flex-start; background: var(--bg);
     border-radius: 16px; padding: 24px; margin-bottom: 16px;
@@ -369,7 +242,7 @@
   .feature-row h3 { font-size: 18px; margin-bottom: 6px; }
   .feature-row p { color: var(--slate); font-size: 14.5px; }
 
-  /* PROCESS STEPS */
+  /* STEPS */
   .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
   @media (max-width: 768px) { .steps { grid-template-columns: 1fr 1fr; } }
   .step-card {
@@ -383,6 +256,67 @@
   .step-card h4 { font-size: 15px; margin-bottom: 6px; }
   .step-card p { font-size: 12.5px; color: var(--slate); }
 
+  /* PRICING */
+  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; max-width: 700px; margin-left: auto; margin-right: auto; }
+  @media (max-width: 768px) { .pricing-grid { grid-template-columns: 1fr; } }
+  .pricing-card {
+    background: white; border: 1px solid var(--border); border-radius: 16px; padding: 32px;
+    box-shadow: 0 1px 3px rgba(17,24,39,0.04);
+  }
+  .pricing-card.featured { border-color: var(--indigo); box-shadow: 0 0 0 1px var(--indigo), 0 8px 30px rgba(79,70,229,0.12); }
+  .pricing-badge {
+    display: inline-block; background: var(--indigo); color: white; font-size: 12px; font-weight: 700;
+    padding: 4px 12px; border-radius: 6px; margin-bottom: 16px; letter-spacing: 0.5px;
+  }
+  .pricing-card h3 { font-size: 20px; margin-bottom: 4px; }
+  .pricing-card .pricing-desc { color: var(--slate); font-size: 13.5px; margin-bottom: 20px; }
+  .pricing-price { font-size: 38px; font-weight: 800; color: var(--indigo); margin-bottom: 4px; }
+  .pricing-price span { font-size: 16px; color: var(--slate); font-weight: 500; }
+  .pricing-features { list-style: none; margin-bottom: 24px; }
+  .pricing-features li {
+    font-size: 14px; padding: 8px 0; border-bottom: 1px solid var(--border);
+    display: flex; gap: 8px; align-items: flex-start;
+  }
+  .pricing-features li:last-child { border-bottom: none; }
+  .pricing-features li::before { content: "✓"; color: var(--mint); font-weight: 700; flex-shrink: 0; }
+  .pricing-btn {
+    display: block; text-align: center; padding: 12px 24px; border-radius: 26px;
+    font-weight: 700; font-size: 14px; text-decoration: none; transition: background 0.15s;
+  }
+  .pricing-btn.primary { background: var(--indigo); color: white; }
+  .pricing-btn.primary:hover { background: var(--indigo-dark); }
+  .pricing-btn.secondary { background: white; color: var(--indigo); border: 1.5px solid var(--indigo); }
+  .pricing-btn.secondary:hover { background: var(--indigo-soft); }
+
+  /* BUNDLE CROSS-SELL */
+  .bundle-section {
+    background: linear-gradient(135deg, #EEF2FF 0%, #E0F2FE 100%);
+    border: 2px solid var(--indigo-soft); border-radius: 20px;
+    padding: 40px 32px; margin-top: 48px; text-align: center;
+  }
+  .bundle-section .bundle-kicker {
+    display: inline-block; background: var(--amber); color: #111827;
+    font-size: 12px; font-weight: 800; padding: 4px 14px; border-radius: 99px;
+    letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px;
+  }
+  .bundle-section h3 { font-size: 24px; margin-bottom: 8px; }
+  .bundle-section p { color: var(--slate); font-size: 15px; max-width: 560px; margin: 0 auto 24px; }
+  .bundle-section .bundle-products { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; align-items: center; }
+  .bundle-section .bundle-product-chip {
+    background: white; border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 20px; font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 8px;
+  }
+  .bundle-section .bundle-plus { font-size: 20px; font-weight: 800; color: var(--indigo); display: flex; align-items: center; }
+  .bundle-price-big { font-size: 42px; font-weight: 800; color: var(--indigo); margin-bottom: 4px; }
+  .bundle-price-big .bundle-old { font-size: 20px; color: var(--slate-light); text-decoration: line-through; font-weight: 500; margin-left: 8px; }
+  .bundle-save { display: inline-block; background: var(--mint); color: white; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 99px; margin-bottom: 20px; }
+  .btn-bundle {
+    background: var(--indigo); color: white; padding: 16px 36px; border-radius: 30px;
+    font-weight: 700; font-size: 16px; text-decoration: none; display: inline-block;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .btn-bundle:hover { background: var(--indigo-dark); transform: translateY(-2px); }
+
   /* ENGAGEMENT */
   .engage-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; margin-top: 48px; }
   @media (max-width: 768px) { .engage-grid { grid-template-columns: 1fr; } }
@@ -392,9 +326,7 @@
   .engage-label { font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 18px; }
   .engage-card.light .engage-label { color: var(--indigo); }
   .engage-card.dark .engage-label { color: #C7D2FE; }
-  .check-list li {
-    list-style: none; display: flex; align-items: center; gap: 12px; margin-bottom: 14px; font-size: 15px;
-  }
+  .check-list li { list-style: none; display: flex; align-items: center; gap: 12px; margin-bottom: 14px; font-size: 15px; }
   .check-list .check-dot {
     width: 24px; height: 24px; border-radius: 50%; background: var(--mint); flex-shrink: 0;
     display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: 900;
@@ -403,7 +335,7 @@
   .engage-card.dark .divider { border-top: 1px solid rgba(255,255,255,0.25); margin: 16px 0; }
   .engage-card.dark .discovery { font-style: italic; color: #E0E7FF; font-size: 14px; }
 
-  /* PROOF STATS */
+  /* STATS */
   .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
   @media (max-width: 768px) { .stats { grid-template-columns: 1fr; } }
   .stat-card {
@@ -413,103 +345,7 @@
   .stat-card .num { font-size: 38px; font-weight: 800; color: var(--indigo); margin: 8px 0; }
   .stat-card .label { font-size: 13.5px; color: var(--slate); }
 
-  /* ── BUNDLE CROSS-SELL SECTION ──────────────────────── */
-  .bundle-section {
-    background: linear-gradient(135deg, #EEF2FF 0%, #E0F2FE 100%);
-    border: 2px solid var(--indigo-soft);
-    border-radius: 20px;
-    padding: 40px 32px;
-    margin-top: 48px;
-    text-align: center;
-  }
-  .bundle-section .bundle-kicker {
-    display: inline-block;
-    background: var(--amber);
-    color: #111827;
-    font-size: 12px;
-    font-weight: 800;
-    padding: 4px 14px;
-    border-radius: 99px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-  .bundle-section h3 {
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
-  .bundle-section p {
-    color: var(--slate);
-    font-size: 15px;
-    max-width: 560px;
-    margin: 0 auto 24px;
-  }
-  .bundle-section .bundle-products {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 24px;
-  }
-  .bundle-section .bundle-product-chip {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 12px 20px;
-    font-weight: 700;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .bundle-section .bundle-plus {
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--indigo);
-    display: flex;
-    align-items: center;
-  }
-  .bundle-price-big {
-    font-family: 'Space Grotesk', -apple-system, sans-serif;
-    font-size: 42px;
-    font-weight: 800;
-    color: var(--indigo);
-    margin-bottom: 4px;
-  }
-  .bundle-price-big .bundle-old {
-    font-size: 20px;
-    color: var(--slate-light);
-    text-decoration: line-through;
-    font-weight: 500;
-    margin-left: 8px;
-  }
-  .bundle-save {
-    display: inline-block;
-    background: var(--mint);
-    color: white;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 99px;
-    margin-bottom: 20px;
-  }
-  .btn-bundle {
-    background: var(--indigo);
-    color: white;
-    padding: 16px 36px;
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 16px;
-    text-decoration: none;
-    display: inline-block;
-    transition: background 0.15s, transform 0.15s;
-  }
-  .btn-bundle:hover {
-    background: var(--indigo-dark);
-    transform: translateY(-2px);
-  }
-
-  /* CONTACT / FOOTER CTA */
+  /* CONTACT */
   .contact-section {
     background: var(--indigo); color: white; border-radius: 28px; padding: 64px 48px;
     text-align: center; margin: 0 24px 80px;
@@ -518,41 +354,36 @@
   .contact-section p { color: #DBE3FF; max-width: 480px; margin: 0 auto 32px; font-size: 16px; }
   .contact-info { margin-top: 32px; font-size: 14.5px; color: #C7D2FE; }
   .contact-info a { color: white; font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); }
-
   footer { text-align: center; padding: 32px 0; color: var(--slate-light); font-size: 13px; }
 </style>
 </head>
 <body>
 
-<!-- ── BUNDLE BANNER ─────────────────────────────────────────── -->
+<!-- BUNDLE BANNER -->
 <div class="bundle-banner">
   <span class="bundle-badge">🔥 Bundle Deal</span>
-  <span>Get <strong>AI FAQ Assistant + AI Visibility Navigator</strong> together —</span>
-  <span class="bundle-price">$199 lifetime</span>
+  <span><strong>AI Visibility Navigator + AI FAQ Assistant</strong> —</span>
+  <span class="bundle-price">$299 setup + from $69/mo</span>
   <a href="mailto:e.kate.taratuta@gmail.com?subject=Bundle%20Deal%20%E2%80%94%20AI%20Growth%20Suite">Grab the bundle →</a>
 </div>
 
 <nav>
   <div class="wrap">
-    <div class="brand">
-      <div class="brand-mark">ET</div>
-      ETSystemsAI
-    </div>
+    <div class="brand"><div class="brand-mark">ET</div>ETSystemsAI</div>
     <a href="#contact" class="nav-cta">Get in touch</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="blob-a"></div>
-  <div class="blob-b"></div>
+  <div class="blob-a"></div><div class="blob-b"></div>
   <div class="wrap">
     <div class="kicker">AI FAQ Assistant</div>
     <h1>Answers your customers' repetitive questions instantly</h1>
     <p class="lede">Turn documentation into instant customer support — in their language, day or night.</p>
     <div class="hero-ctas">
       <a href="#demo" class="btn-primary">See it in action</a>
-      <a href="#contact" class="btn-secondary">Talk to us</a>
+      <a href="#pricing" class="btn-secondary">View pricing</a>
     </div>
     <div class="pill"><span class="dot"></span> Built and proven on a live production deployment</div>
   </div>
@@ -564,26 +395,10 @@
     <div class="kicker">The problem</div>
     <h2>Your support team answers the same questions, every day</h2>
     <div class="grid-2">
-      <div class="card">
-        <div class="card-icon">📄</div>
-        <h3>Repetitive tickets pile up</h3>
-        <p>"How do I fill in this field?" "What changed in the last update?" — the same handful of questions, over and over.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">⏱️</div>
-        <h3>Answers take hours, not seconds</h3>
-        <p>Customers wait for a reply during business hours, while the answer often already exists in your docs.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">👥</div>
-        <h3>Knowledge lives in someone's head</h3>
-        <p>Your best support answers are scattered across emails, chats, and one experienced employee's memory.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">⚡</div>
-        <h3>Regulation changes hit all at once</h3>
-        <p>When the market or the rules governing your business shift, you get a sudden flood of "how do I do this now?" — all at once.</p>
-      </div>
+      <div class="card"><div class="card-icon">📄</div><h3>Repetitive tickets pile up</h3><p>"How do I fill in this field?" "What changed in the last update?" — the same handful of questions, over and over.</p></div>
+      <div class="card"><div class="card-icon">⏱️</div><h3>Answers take hours, not seconds</h3><p>Customers wait for a reply during business hours, while the answer often already exists in your docs.</p></div>
+      <div class="card"><div class="card-icon">👥</div><h3>Knowledge lives in someone's head</h3><p>Your best support answers are scattered across emails, chats, and one experienced employee's memory.</p></div>
+      <div class="card"><div class="card-icon">⚡</div><h3>Regulation changes hit all at once</h3><p>When the market or the rules governing your business shift, you get a sudden flood of "how do I do this now?" — all at once.</p></div>
     </div>
   </div>
 </section>
@@ -613,26 +428,10 @@
     <div class="kicker">Capabilities</div>
     <h2>What it actually does</h2>
     <div class="grid-2">
-      <div class="card">
-        <div class="card-icon">🔍</div>
-        <h3>Answers from facts, not guesses</h3>
-        <p>Every answer is grounded in your own documentation. No hallucinated policies, no made-up steps.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🌐</div>
-        <h3>Understands multiple languages at once</h3>
-        <p>One knowledge base, many languages — customers ask in their own words, no separate setup per language.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">📷</div>
-        <h3>Understands screenshots</h3>
-        <p>A customer can attach a screenshot of their screen — the assistant sees what field they mean and answers precisely.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">📊</div>
-        <h3>Shows you what customers actually ask</h3>
-        <p>A built-in dashboard tracks questions the assistant couldn't confidently answer — a ready-made list of what to add to your FAQ.</p>
-      </div>
+      <div class="card"><div class="card-icon">🔍</div><h3>Answers from facts, not guesses</h3><p>Every answer is grounded in your own documentation. No hallucinated policies, no made-up steps.</p></div>
+      <div class="card"><div class="card-icon">🌐</div><h3>Understands multiple languages at once</h3><p>One knowledge base, many languages — customers ask in their own words, no separate setup per language.</p></div>
+      <div class="card"><div class="card-icon">📷</div><h3>Understands screenshots</h3><p>A customer can attach a screenshot of their screen — the assistant sees what field they mean and answers precisely.</p></div>
+      <div class="card"><div class="card-icon">📊</div><h3>Shows you what customers actually ask</h3><p>A built-in dashboard tracks questions the assistant couldn't confidently answer — a ready-made list of what to add to your FAQ.</p></div>
     </div>
   </div>
 </section>
@@ -643,119 +442,25 @@
     <div class="kicker">Live demo</div>
     <h2>A real conversation, not a script</h2>
     <p class="lede">This is an actual interaction with the AI FAQ Assistant. Real questions from prospective customers, real grounded answers.</p>
-    
     <div class="chat-container">
-      <div class="chat-header">
-        <div class="chat-avatar">AI</div>
-        <div>
-          <h3>AI FAQ Assistant</h3>
-          <span class="status">● Online — grounded in real documentation</span>
-        </div>
-      </div>
-      
+      <div class="chat-header"><div class="chat-avatar">AI</div><div><h3>AI FAQ Assistant</h3><span class="status">● Online — grounded in real documentation</span></div></div>
       <div class="chat-messages">
-        <div class="message user">
-          <div class="message-avatar user-avatar">👤</div>
-          <div>
-            <div class="message-bubble">
-              How does this bot work?
-              <span class="message-time">11:32</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="message bot">
-          <div class="message-avatar bot">AI</div>
-          <div>
-            <div class="message-bubble">
-              I search your documentation, FAQ, and manuals to find the exact answer to each question. I don't guess — I only respond with information that exists in your knowledge base. If I can't find it, I'll let you know and offer to connect you with a human.
-              <span class="message-time">11:32</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="message user">
-          <div class="message-avatar user-avatar">👤</div>
-          <div>
-            <div class="message-bubble">
-              Does it understand multiple languages?
-              <span class="message-time">11:33</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="message bot">
-          <div class="message-avatar bot">AI</div>
-          <div>
-            <div class="message-bubble">
-              Yes — one knowledge base works across multiple languages. Customers can ask in their own language, and the assistant responds in the same language. Currently supporting Serbian (Cyrillic and Latin) and English, with additional languages available on request.
-              <span class="message-time">11:33</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="message user">
-          <div class="message-avatar user-avatar">👤</div>
-          <div>
-            <div class="message-bubble">
-              Can it process screenshots?
-              <span class="message-time">11:34</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="message bot">
-          <div class="message-avatar bot">AI</div>
-          <div>
-            <div class="message-bubble">
-              Yes — when a customer uploads a screenshot, the assistant analyzes the image to understand exactly what field or issue they're referring to, then provides precise, contextual help based on your documentation.
-              <span class="message-time">11:34</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="message user">
-          <div class="message-avatar user-avatar">👤</div>
-          <div>
-            <div class="message-bubble">
-              How much does this cost?
-              <span class="message-time">11:35</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="message bot">
-          <div class="message-avatar bot">AI</div>
-          <div>
-            <div class="message-bubble">
-              Pricing is tailored to each deployment based on documentation volume, expected usage, language requirements, integrations, and screenshot support. I can connect you with our team for a short discovery call to provide an accurate estimate.
-              <span class="message-time">11:35</span>
-            </div>
-          </div>
-        </div>
+        <div class="message user"><div class="message-avatar user-avatar">👤</div><div><div class="message-bubble">How does this bot work?<span class="message-time">11:32</span></div></div></div>
+        <div class="message bot"><div class="message-avatar bot">AI</div><div><div class="message-bubble">I search your documentation, FAQ, and manuals to find the exact answer to each question. I don't guess — I only respond with information that exists in your knowledge base. If I can't find it, I'll let you know and offer to connect you with a human.<span class="message-time">11:32</span></div></div></div>
+        <div class="message user"><div class="message-avatar user-avatar">👤</div><div><div class="message-bubble">Does it understand multiple languages?<span class="message-time">11:33</span></div></div></div>
+        <div class="message bot"><div class="message-avatar bot">AI</div><div><div class="message-bubble">Yes — one knowledge base works across multiple languages. Customers can ask in their own language, and the assistant responds in the same language. Currently supporting Serbian (Cyrillic and Latin) and English, with additional languages available on request.<span class="message-time">11:33</span></div></div></div>
+        <div class="message user"><div class="message-avatar user-avatar">👤</div><div><div class="message-bubble">Can it process screenshots?<span class="message-time">11:34</span></div></div></div>
+        <div class="message bot"><div class="message-avatar bot">AI</div><div><div class="message-bubble">Yes — when a customer uploads a screenshot, the assistant analyzes the image to understand exactly what field or issue they're referring to, then provides precise, contextual help based on your documentation.<span class="message-time">11:34</span></div></div></div>
+        <div class="message user"><div class="message-avatar user-avatar">👤</div><div><div class="message-bubble">How much does this cost?<span class="message-time">11:35</span></div></div></div>
+        <div class="message bot"><div class="message-avatar bot">AI</div><div><div class="message-bubble">Setup is $199 one-time, then from $49/month for hosting, monitoring, and ongoing support. You bring your own API key — so you only pay for the tokens you use (about $0.01 per query). Exact monthly price depends on your document volume and query load.<span class="message-time">11:35</span></div></div></div>
       </div>
-      
       <div class="chat-features">
-        <div class="feature-tag">
-          <span class="icon">🌐</span>
-          <span>Multilingual support in a single knowledge base</span>
-        </div>
-        <div class="feature-tag">
-          <span class="icon">📷</span>
-          <span>Screenshot understanding</span>
-        </div>
-        <div class="feature-tag">
-          <span class="icon">🛡️</span>
-          <span>Grounded, honest answers</span>
-        </div>
+        <div class="feature-tag"><span class="icon">🌐</span><span>Multilingual support in a single knowledge base</span></div>
+        <div class="feature-tag"><span class="icon">📷</span><span>Screenshot understanding</span></div>
+        <div class="feature-tag"><span class="icon">🛡️</span><span>Grounded, honest answers</span></div>
       </div>
     </div>
-    
-    <div class="demo-note">
-      💡 Live demonstration available during a discovery call — we'll show how it works with your own questions.
-      <br>
-      <a href="#contact">→ Request a live demo</a>
-    </div>
+    <div class="demo-note">💡 Live demonstration available during a discovery call — we'll show how it works with your own questions.<br><a href="#contact">→ Request a live demo</a></div>
   </div>
 </section>
 
@@ -763,19 +468,12 @@
 <section>
   <div class="wrap">
     <div class="kicker">Customization</div>
-    <h2>This demo runs in English.<br>Your deployment runs in your languages (may be not one) </h2>
-    <div class="info-card">
-      <div class="card-icon">🌐</div>
-      <p>The assistant can handle multiple languages in the same knowledge base — no separate setup per language. Tell us which languages your customers use, and we configure the assistant accordingly.</p>
-    </div>
+    <h2>This demo runs in English.<br>Your deployment runs in your languages (may be not one)</h2>
+    <div class="info-card"><div class="card-icon">🌐</div><p>The assistant can handle multiple languages in the same knowledge base — no separate setup per language. Tell us which languages your customers use, and we configure the assistant accordingly.</p></div>
     <h3 style="margin-top:40px; font-size:18px;">Which languages does your customer base need?</h3>
     <div class="lang-chips">
-      <span class="lang-chip">English</span>
-      <span class="lang-chip">Serbian</span>
-      <span class="lang-chip">Czech</span>
-      <span class="lang-chip">German</span>
-      <span class="lang-chip">Italian</span>
-      <span class="lang-chip cta">+ Your language</span>
+      <span class="lang-chip">English</span><span class="lang-chip">Serbian</span><span class="lang-chip">Czech</span>
+      <span class="lang-chip">German</span><span class="lang-chip">Italian</span><span class="lang-chip cta">+ Your language</span>
     </div>
   </div>
 </section>
@@ -784,60 +482,71 @@
 <section class="alt-bg">
   <div class="wrap">
     <div class="kicker">Why it's different</div>
-    <h2>Reliable, fully managed, easy to embed</h2>
+    <h2>We run it. You focus on your business.</h2>
     <div style="margin-top:40px;">
-      <div class="feature-row">
-        <div class="card-icon">🛡️</div>
-        <div><h3>Honest by design</h3><p>If the answer isn't in your knowledge base, it says so — and routes to your team. It never invents a policy or a number.</p></div>
-      </div>
-      <div class="feature-row">
-        <div class="card-icon">🖥️</div>
-        <div><h3>Fully managed for you</h3><p>We run the infrastructure, monitor uptime, and keep the assistant updated — your team never touches a server.</p></div>
-      </div>
-      <div class="feature-row">
-        <div class="card-icon">🔌</div>
-        <div><h3>Drops into your existing site</h3><p>One line of code embeds the chat widget wherever you already have a website — no rebuild required.</p></div>
-      </div>
+      <div class="feature-row"><div class="card-icon">🛡️</div><div><h3>Honest by design</h3><p>If the answer isn't in your knowledge base, it says so — and routes to your team. It never invents a policy or a number.</p></div></div>
+      <div class="feature-row"><div class="card-icon">🖥️</div><div><h3>Fully managed hosting</h3><p>We deploy on our infrastructure, monitor uptime, and keep everything updated. Your team never touches a server.</p></div></div>
+      <div class="feature-row"><div class="card-icon">💰</div><div><h3>Transparent monthly pricing</h3><p>From $49/month based on your actual usage — document volume, query load, and features like screenshot support. You bring your own API key, so there are no hidden LLM costs.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section>
+<!-- PRICING -->
+<section id="pricing">
   <div class="wrap">
-    <div class="kicker">Process</div>
-    <h2>From your content to a live assistant</h2>
-    <div class="steps">
-      <div class="step-card"><div class="step-num">1</div><h4>Send your content</h4><p>FAQ, manuals, documentation — any format you already have.</p></div>
-      <div class="step-card"><div class="step-num">2</div><h4>We build &amp; test</h4><p>Knowledge base, search, and the assistant — built and refined.</p></div>
-      <div class="step-card"><div class="step-num">3</div><h4>You review</h4><p>Test it yourself on a private link before anything goes live.</p></div>
-      <div class="step-card"><div class="step-num">4</div><h4>It goes live</h4><p>Embedded on your site, answering customers immediately.</p></div>
+    <div class="kicker">Pricing</div>
+    <h2>Simple, transparent, tailored to you</h2>
+    <p class="lede">Every deployment is scoped individually. Here's the starting point.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Setup</h3>
+        <div class="pricing-price">$199 <span>one-time</span></div>
+        <p class="pricing-desc">Knowledge base configuration, deployment, and 30 days of post-launch support.</p>
+        <ul class="pricing-features">
+          <li>Knowledge base ingestion & setup</li>
+          <li>Assistant configuration & testing</li>
+          <li>Deployment on our infrastructure</li>
+          <li>30-day post-launch support</li>
+        </ul>
+        <a href="mailto:e.kate.taratuta@gmail.com?subject=FAQ%20Assistant%20Setup" class="pricing-btn secondary">Get started →</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-badge">ONGOING</div>
+        <h3>Maintenance</h3>
+        <div class="pricing-price">from $49 <span>/month</span></div>
+        <p class="pricing-desc">Hosting, monitoring, updates, and support. Exact price depends on your volume.</p>
+        <ul class="pricing-features">
+          <li>Hosting on our servers</li>
+          <li>Uptime monitoring & alerts</li>
+          <li>Regular updates & improvements</li>
+          <li>Ongoing engineering support</li>
+          <li>You bring your API key (~$0.01/query)</li>
+        </ul>
+        <a href="mailto:e.kate.taratuta@gmail.com?subject=FAQ%20Assistant%20Maintenance" class="pricing-btn primary">Talk to us →</a>
+      </div>
     </div>
-    <div class="note-box" style="text-align:center;">Typical timeline: 4–5 weeks for a text-based assistant. Screenshot support adds 1–2 weeks.</div>
+    <p style="text-align:center; color:var(--slate); font-size:13.5px; margin-top:20px;">Volume-based pricing: starts at $49/mo for up to 500 documents and 1,000 queries/day. Larger deployments quoted after a discovery call.</p>
   </div>
 </section>
 
-<!-- ── BUNDLE CROSS-SELL ──────────────────────────────────────── -->
+<!-- BUNDLE CROSS-SELL -->
 <section class="alt-bg">
   <div class="wrap">
     <div class="bundle-section">
       <div class="bundle-kicker">🚀 Special Offer</div>
       <h3>The Complete AI Growth Suite</h3>
-      <p>Get both tools — bring traffic to your site AND answer every customer instantly. One price, lifetime access.</p>
-      
+      <p>Get both tools — bring traffic to your site AND answer every customer instantly. One setup fee, one monthly bill.</p>
       <div class="bundle-products">
         <div class="bundle-product-chip">🔍 AI Visibility Navigator</div>
         <div class="bundle-plus">+</div>
         <div class="bundle-product-chip">💬 AI FAQ Assistant</div>
       </div>
-      
-      <div class="bundle-price-big">
-        $199 <span class="bundle-old">$298</span>
-      </div>
-      <div class="bundle-save">Save $99 — Lifetime Access</div>
+      <div class="bundle-price-big">$299 <span class="bundle-old">$398</span> <span style="font-size:16px;font-weight:500;color:var(--slate);">setup</span></div>
+      <div class="bundle-price-big" style="font-size:28px;margin-top:8px;">from $69 <span style="font-size:16px;font-weight:500;color:var(--slate);">/month</span> <span class="bundle-old" style="font-size:16px;">from $128</span></div>
+      <div class="bundle-save">Save $99 on setup + from $59/month</div>
       <br>
-      <a href="mailto:e.kate.taratuta@gmail.com?subject=Bundle%20Deal%20%E2%80%94%20AI%20Growth%20Suite%20%24199" class="btn-bundle">Get Both Tools →</a>
-      <p style="margin-top: 16px; font-size: 13px; color: var(--slate);">Bring your own API key — you only pay for what you use (~$0.01/query)</p>
+      <a href="mailto:e.kate.taratuta@gmail.com?subject=Bundle%20Deal%20%E2%80%94%20AI%20Growth%20Suite" class="btn-bundle">Get Both Tools →</a>
+      <p style="margin-top:16px; font-size:13px; color:var(--slate);">Hosting, monitoring & support included. You bring your own API key. Final price quoted after a short discovery call.</p>
     </div>
   </div>
 </section>
@@ -846,25 +555,25 @@
 <section>
   <div class="wrap">
     <div class="kicker">Engagement</div>
-    <h2>A managed service, not a one-time handoff</h2>
-    <p class="lede">The assistant keeps running, keeps improving, and stays aligned with your documentation.</p>
+    <h2>We set it up. We run it. You use it.</h2>
+    <p class="lede">The assistant keeps running on our infrastructure, keeps improving, and stays aligned with your documentation.</p>
     <div class="engage-grid">
       <div class="engage-card light">
         <div class="engage-label">WHAT'S INCLUDED</div>
         <ul class="check-list">
-          <li><span class="check-dot">✓</span> Knowledge base setup</li>
-          <li><span class="check-dot">✓</span> Assistant configuration</li>
-          <li><span class="check-dot">✓</span> Ongoing maintenance</li>
-          <li><span class="check-dot">✓</span> Monitoring and updates</li>
-          <li><span class="check-dot">✓</span> Analytics and continuous improvement</li>
+          <li><span class="check-dot">✓</span> Knowledge base setup & configuration</li>
+          <li><span class="check-dot">✓</span> Deployment on our infrastructure</li>
+          <li><span class="check-dot">✓</span> Ongoing hosting & monitoring</li>
+          <li><span class="check-dot">✓</span> Regular updates & improvements</li>
+          <li><span class="check-dot">✓</span> Analytics dashboard</li>
           <li><span class="check-dot">✓</span> Direct engineering support</li>
         </ul>
       </div>
       <div class="engage-card dark">
-        <div class="engage-label">ENGAGEMENT MODEL</div>
+        <div class="engage-label">HOW IT WORKS</div>
         <p>Every deployment is scoped individually based on documentation volume, expected usage, language requirements, integrations, and screenshot support.</p>
         <div class="divider"></div>
-        <div class="discovery">Pricing available after a short discovery call.</div>
+        <div class="discovery">Setup from $199 · Maintenance from $49/mo<br>Exact pricing after a short discovery call.</div>
       </div>
     </div>
   </div>
